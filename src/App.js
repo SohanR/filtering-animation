@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+
+
+  const fetchPopular = async () => {
+    const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=4d924c861f0ad983bad92ce12a9610ff&language=en-US&page=1')
+
+    const movies = awat data.json();
+
+
+  }
+
+  console.log("hello");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{process.env.NAME}</h1>
     </div>
   );
 }
