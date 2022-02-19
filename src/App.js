@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Movie from './Movie';
 
 
 function App() {
@@ -25,7 +26,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>hello</h1>
+     <div className='popular-movies' >
+       {
+         popular.map((movie) =>{
+           return <Movie key={movie.id} movie={movie} />
+         })
+       }
+     </div>
     </div>
   );
 }
